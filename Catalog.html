@@ -5,9 +5,297 @@
 <link rel="stylesheet" type="text/css" href="style-sheet.css">
 
 </head>
+<style>
+header 
 
-<body>
+.mdiv {
+	margin-top: 25px;
+    background-color: #64908A;
+    width: 80%;
+    min-height: 1000px;
+    margin-left: 10%;
+}
 
+.window {
+	background-color: grey;
+    border-style: solid;
+    border-color: white;
+    padding: 10px;
+    border-width: 10px;
+    border-style: solid;
+	width: 40%;
+	height: 100px;
+	margin-left: 20%;
+    margin-top: 250px;
+	display: none;
+    position: fixed;
+}
+.window2 {
+    background-color: grey;
+    border-style: solid;
+    border-color: white;
+    border-width: 10px;
+    width: 40%;
+    height: 100px;
+    padding: 10px;
+    margin-left: 20%;
+    margin-top: 250px;
+    display: none;
+    position: fixed;
+}
+.window3 {background-color: black;
+    border-style: dashed;
+    border-color: pink;
+    border-width: 10px;
+    width: 50%;
+    height: 300px;
+    margin-left: 20%;
+    margin-top: 250px;
+    position: fixed;
+    display: none;
+}
+.sale {
+    background-color: grey;
+    border-color: #66FF33;
+    border-style: solid;
+    border-width: 10px;
+    width: 270px;
+    height: 300px;
+    margin:20px;
+    overflow: hidden;
+    display: inline-block;
+}
+.pic{
+    width:250px; 
+    height: 80%;
+    border-style: solid;
+    border-width: 10px;
+    border-color: blue;
+    
+}
+.w3font {
+    font-size: 30px;
+    color: blue;
+
+}
+button {float:right;}
+
+p {float: left;
+    font-size: 20px;
+    margin: 5px;}
+h1 {background-color: black;
+    color:blue;}
+
+
+}
+</style>
+
+ <body>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+<script>
+  $(document).ready(function(){
+    
+        $(".show").click(function(){
+        $(".window").show("slow");
+         
+  });
+       
+        $(".checkout").click(function(){
+        $(".window3").show("slow");
+});
+
+       $(".close").click(function(){
+       $(".window3").hide("slow");
+       $(".window2").hide("slow");
+});
+});
+$(document).ready(function(){
+
+
+$("#numb_value").click(function(){
+    // use jquery to grab value of input field
+  var numb_value = $("#numb").val(); 
+  if(numb_value<= 0) {
+alert("Incorrect amount");
+}else{
+alert(numb_value  + " item(s) have been added to your cart");
+}
+
+
+
+   
+        $(".window").hide();
+        $(".window2").show();
+       
+       $("#hide").click(function(){
+        $(".window2").hide("slow");
+
+      
+  
+});
+    
+
+    });
+
+    });
+</script>
+ <header>
+
+ 	<nav>
+ 	<ul>
+		<li><a href="index.html">Home</a></li>
+		<li><a href="about.html">About</a></li>
+		<li><a href="catalog.html">Catalog</a></li>
+		<li><a href="subscription.html">Subscription</a></li>
+    </ul>
+ 	</nav>
+<a href="index.html">
+    <img src="mainlogo-01.png">
+   </a> 
+
+   
+
+ </header>
+
+  
+
+  <div class="mdiv">
+ <div class="window">
+<input id="numb"  type="number" value="">
+
+
+<input id="numb_value"  value="Add to cart" type="button">
+
+<h3>How many of these do you wish to purchase?</h3>
+
+
+
+</div>
+<div class="window2">
+    <h3>All items are in your cart. You may continue shopping or check out at any time.</h3>
+    <button id="hide">Continue Shopping</button>
+    <button class="checkout">Check Out</button>
+</div>
+<div class="window3">
+    <h3 class="w3font">Thank you for your purchase!</h3>
+    <button class="close">Continue Shopping</button>
+</div>
+
+
+
+<div class="sale">
+    <img class="pic" src="http://cnafinance.com/wp-content/uploads/2015/07/Pet-Rock-Gold.jpg">
+<p>$3.99</p>
+<button class="show">Add to Cart</button>
+</div>
+
+<div class="sale">
+<img class="pic" src="http://ipb.s3.amazonaws.com/uploads/monthly_04_2015/post-546080-0-93639200-1429504337.jpg">
+<p>$3.99</p>
+<button class="show">Add to Cart</button>
+</div>
+
+<div class="sale">
+<img class="pic" src="http://www.gstatemarketing.com/wp-content/uploads/2015/07/Pet-Rock.jpg">
+<button class="show">Add to Cart</button>
+<p>$2.99</p>
+</div>
+
+<div class="sale">
+<img class="pic" src="http://angelknorr.files.wordpress.com/2013/04/baby-pet-rocks.jpg">
+<button class="show">Add to Cart</button>
+<p>Free</p>
+</div>
+
+<div class="sale">
+<img class="pic" src="http://celebratebigsmall.files.wordpress.com/2012/08/pet-rock.jpeg">
+<p>$1.99</p>
+<button class="show">Add to Cart</button>
+</div>
+
+<div class="sale">
+<img class="pic" src="http://img13.deviantart.net/cfcc/i/2013/018/e/8/fancy_french_pet_rock_by_smileyhearts-d5rx61z.jpg">
+<p>$2.99</p>
+<button class="show">Add to Cart</button>
+</div>
+
+<div class="sale">
+<img class="pic" src="https://s-media-cache-ak0.pinimg.com/236x/35/56/90/35569009de428530211976f52fb4220f.jpg">
+<p>$5.99</p>
+<button class="show">Add to Cart</button>
+</div>
+
+<div class="sale">
+<img class="pic" src="https://s-media-cache-ak0.pinimg.com/originals/77/1d/87/771d87228917c3c841628a64d755de92.jpg">
+<p>$2.99</p>
+<button class="show">Add to Cart</button>
+</div>
+
+<div class="sale">
+<img class="pic" src="http://audizcreations.weebly.com/uploads/3/7/6/9/3769273/160332_orig.jpg">
+<p>$3.99</p>
+<button class="show">Add to Cart</button>
+</div>
+
+<div class="sale">
+<img class="pic" src="https://s-media-cache-ak0.pinimg.com/236x/cc/43/6d/cc436d36d8e38ca0ee0a835d8f54526b.jpg">
+<p>$2.99</p>
+<button class="show">Add to Cart</button>
+</div>
+
+<div class="sale">
+<img class="pic" src="https://s-media-cache-ak0.pinimg.com/236x/29/6b/6b/296b6b25cb1f53d2e3d9b291a0591546.jpg">
+<p>$4.99</p>
+<button class="show">Add to Cart</button>
+</div>
+
+<div class="sale">
+<img class="pic" src="http://www.jrosebud.com/designs/catalog/blog/wp-content/uploads/il_430xn39597542.jpg">
+<p>$1.99</p>
+<button class="show">Add to Cart</button>
+</div>
+
+</div>
+
+<footer>
+
+
+   <div class="social">
+    <a href="https://www.facebook.com/petrockfan" target="_blank">
+      <i class="fa fa-facebook">
+      </i>
+    </a>
+   </div>
+
+   <div class="social">
+    <a href="https://twitter.com/officialpetrock" target="_blank">
+      <i class="fa fa-twitter"></i>
+    </a>
+   </div>
+
+   <div class="social">
+    <a href="https://instagram.com/my.pet.rock/"target="_blank">
+      <i class="fa fa-instagram"></i>
+    </a>
+   </div>
+
+   <br>
+
+    <div class="footerinfo">
+     <ul>
+    <li><a href="aboutus.html">About Us</a></li>
+    <li><a href="contactus.html">Contact Us</a></li>
+    <li><a href="terms.html">Terms of Service</a></li>
+    <li><a href="privacy.html">Privacy Policy</a></li>
+    </ul>
+    </div>
+    
+
+
+
+  	
+
+  </footer>
 
 </body>
 

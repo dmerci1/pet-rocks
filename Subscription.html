@@ -4,9 +4,198 @@
 
 <link rel="stylesheet" type="text/css" href="style-sheet.css">
 </head>
+<style>
 
-<body>
+p {position: block;
+margin-top: 250px;
+font-size: 30px;}
+.tile {
+	background-color: #64908A;
+    max-width: 800%;
+    min-width: 600px;
+    height:300px;
+    margin-left: 10%;
+    margin-right: 10%;
+    margin-top: 10%;
+    margin-bottom: 75px;
+    overflow: hidden;
+}
+form {float: left;}
 
+input {display: block;
+	  width: 300px;
+	  height: 25px;
+	  font-size: 20px;
+	  border-style: solid;
+	  border-width: 10px;
+	  border-color: #F4EAD5;
+	  margin:20px;
+}
+
+button {
+        border-radius: 100px;
+        float: right;
+        margin-right: 20px;
+        margin-top: 80px;
+        color: blue;
+        text-decoration: underline;
+        font-size: 40px;
+    }
+
+.pet-button {
+	width: 300px;
+    width: 175px;
+	height: 70px;
+	background-color: #CF501F;
+	
+}
+h1 {
+	color: blue;
+	text-align: center;
+}
+
+</style>
+
+<!DOCTYPE html>
+<html>
+ <head>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+  <link rel="stylesheet" type="text/css" href="style-sheet.css">
+  <link href='https://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
+ </head>
+
+ <body>
+ <header>
+
+ 	<nav>
+ 	<ul>
+		<li><a href="index.html">Home</a></li>
+		<li><a href="about.html">About</a></li>
+		<li><a href="catalog.html">Catalog</a></li>
+		<li><a href="subscription.html">Subscription</a></li>
+    </ul>
+ 	</nav>
+
+  <a href="index.html">
+    <img src="mainlogo-01.png">
+   </a> 
+  
+   
+
+ </header>
+
+ 
+
+  <h1>If you would like to subscribe to our monthly news letter, please enter your information below.</h1>
+
+
+
+
+<div class="tile">
+<form>
+  <label>First Name</label>
+<input id="first" type="text">
+<label>Last Name</label>
+<input id="last" type="text">
+<label>E-Mail</label>
+<input id="mail" type="text">
+</form>
+
+<button class="pet-button" type="button" onclick="myFunction()">Submit</button>
+<p id="l"></p>
+</div>
+<script>
+
+function myFunction() {
+	var x;
+	var y;
+	var z;
+    var blank;
+
+	
+
+x = document.getElementById("first").value;
+y = document.getElementById("last").value;
+z = document.getElementById("mail").value;
+blank = "";
+if (x + y +z === blank) {
+	text = "Please Enter Contact Information";
+} 
+
+else if (x  === blank) {
+ text = "Enter First Name";
+
+} 
+else if (y === blank) {
+	text="Enter Last Name";
+}
+else if (z === blank) {
+	text="Enter E-mail";
+}
+else { text= "Info Sent!";
+
+      alert ("Thank you for subscribing to our monthly news letter! We are now about to constantly e-mail you stuff as well.")}
+
+
+
+
+
+document.getElementById("l").innerHTML = text;
+}
+
+
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<footer>
+
+   <div class="social">
+    <a href="https://www.facebook.com/petrockfan" target="_blank">
+      <i class="fa fa-facebook">
+      </i>
+    </a>
+   </div>
+
+   <div class="social">
+    <a href="https://twitter.com/officialpetrock" target="_blank">
+      <i class="fa fa-twitter"></i>
+    </a>
+   </div>
+
+   <div class="social">
+    <a href="https://instagram.com/my.pet.rock/"target="_blank">
+      <i class="fa fa-instagram"></i>
+    </a>
+   </div>
+
+   <br>
+
+    <div class="footerinfo">
+     <ul>
+    <li><a href="aboutus.html">About Us</a></li>
+    <li><a href="contactus.html">Contact Us</a></li>
+    <li><a href="terms.html">Terms of Service</a></li>
+    <li><a href="privacy.html">Privacy Policy</a></li>
+    </ul>
+    </div>
+    
+
+
+
+  	
+
+  </footer>
 
 </body>
 
